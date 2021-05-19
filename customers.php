@@ -1,3 +1,4 @@
+<?php include('functions.php'); ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -5,7 +6,8 @@
     <title>Kunder</title>
   </head>
   <body>
-  <?php include('navigation.php') ?>
+  <?php include('navigation.php'); ?>
+
     <a href="create-customers.php">Opret ny kunde</a>
 
 
