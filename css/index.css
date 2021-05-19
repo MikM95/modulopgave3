@@ -3,3 +3,7 @@
   margin-left: auto;
   margin-right: auto;
 }
+.container {
+  display: grid;
+  grid-template-columns: 50px 50
+}

@@ -6,8 +6,7 @@
     <link rel="stylesheet" href="css/index.css">
   </head>
   <body>
-    <?php include('navigation.php') ?>
-  
+
     <img src="https://via.placeholder.com/150" alt="Aros & søn logo" class="center">
 
     <form method="post">

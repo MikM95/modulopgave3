@@ -1,0 +1,26 @@
+ul {
+  list-style-type: none;
+  background-color: yellow;
+  /* Overflow defimerer hvad der sker med indhold der er for stort til at være i et område */
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  border-bottom:1px solid black;
+}
+li {
+  float: left;
+}
+li a{
+  display: block;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  padding: 14px 150px;
+
+}
+li a:hover{
+  background-color: white;
+}
+li:first-child {
+  font-weight: bold;
+}
