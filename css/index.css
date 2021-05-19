@@ -3,7 +3,18 @@
   margin-left: auto;
   margin-right: auto;
 }
-.container {
-  display: grid;
-  grid-template-columns: 50px 50
+.formular{
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+#more-right{
+  margin-left: 630px;
+}
+.line-breaker {
+  padding-bottom: 5px;
+}
+.line-breaker input{
+  width: 350px;
+  height: 30px;
 }
