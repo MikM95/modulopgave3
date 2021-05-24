@@ -7,6 +7,9 @@
   display: flex;
   justify-content: center;
   margin-top: 100px;
+  margin-bottom: 60px;
+  margin-left: auto;
+  margin-right: auto;
 }
 #more-right{
   margin-left: 630px;
@@ -17,4 +20,15 @@
 .line-breaker input{
   width: 350px;
   height: 30px;
+}
+
+.footer {
+  background: #808080;
+  color: #ffffff;
+  font-size: 14px;
+  letter-spacing: normal;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  text-align: center;
+  word-spacing: normal;
 }

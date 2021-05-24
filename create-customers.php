@@ -2,8 +2,9 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Kunde oprettelse</title>
     <link rel="stylesheet" href="css/index.css">
+
   </head>
   <body>
     <?php include('navigation.php') ?>
@@ -29,6 +30,14 @@
         </div>
         <button type="submit" id="more-right">Opret kunde</button>
       </form>
+    </div>
+
+    <div class="footer"
+      <p>Aros og Søn Aps <br>
+        Seebladsgade 1 <br>
+        5000 Odense C
+
+      </p>
     </div>
 
   </body>

@@ -1,11 +1,12 @@
 ul {
   list-style-type: none;
-  background-color: yellow;
+  background-color: #808080;
   /* Overflow defimerer hvad der sker med indhold der er for stort til at være i et område */
   overflow: hidden;
   margin: 0;
-  padding: 0;
+  padding: 1%;
   border-bottom:1px solid black;
+  
 }
 li {
   float: left;
@@ -18,7 +19,7 @@ li a{
   padding: 14px 169px;
 }
 li a:hover{
-  background-color: white;
+  background-color: yellow;
 }
 li:first-child {
   font-weight: bold;
