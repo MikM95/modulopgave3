@@ -25,8 +25,9 @@ $eid = $_GET['eid'];
         <p><?php echo $info['phone_emp']; ?></p>
       </div>
       <div class="right">
-        <p>Ansvarlig for flg. kunder:</p>
-
+        <p class="center-text">Ansvarlig for flg. kunder:</p>
+        <hr id="line">
+        
       </div>
     </div>
 

@@ -44,3 +44,11 @@
   background-color: red;
   width: 50%; float: left;
 }
+.center-text {
+  text-align: center;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+#line {
+  width: 60%;
+}
