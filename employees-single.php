@@ -13,23 +13,22 @@ $eid = $_GET['eid'];
   <body>
     <?php
     include('navigation.php');
-    $data = performQuery("SELECT id, f_name, l_name, mail, phone_emp FROM employees WHERE id='$eid'");
+    $data = performQuery("SELECT f_name, l_name, mail, phone_emp, employee_role.role FROM employees INNER JOIN employee_role ON employees.role_id = employee_role.role_id WHERE id='$eid'");
     $info = mysqli_fetch_array($data);
-
     ?>
 
-<div class="site-width">
-     <div class="left">
-       <p>Role</p>
-       <p><?php echo $info['f_name']; $info['l_name']; ?></p>
-       <p><?php echo $info['mail']; ?></p>
-       <p><?php echo $info['phone_emp']; ?></p>
-     </div>
-     <div class="right">
-       <p>Ansvarlig for flg. kunder:</p>
+    <div class="site-width">
+      <div class="left">
+        <p><?php echo $info['role']; ?> </p>
+        <p><?php echo $info['f_name'] ." ". $info['l_name']; ?></p>
+        <p><?php echo $info['mail']; ?></p>
+        <p><?php echo $info['phone_emp']; ?></p>
+      </div>
+      <div class="right">
+        <p>Ansvarlig for flg. kunder:</p>
 
-     </div>
-</div>
+      </div>
+    </div>
 
 
   </body>

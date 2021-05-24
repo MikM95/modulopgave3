@@ -4,7 +4,7 @@ ul {
   /* Overflow defimerer hvad der sker med indhold der er for stort til at være i et område */
   overflow: hidden;
   margin: 0;
-  padding: 1%;
+  padding: 0;
   border-bottom:1px solid black;
 
 }
