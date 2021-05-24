@@ -21,13 +21,13 @@ $eid = $_GET['eid'];
       <div class="left">
         <p><?php echo $info['role']; ?> </p>
         <p><?php echo $info['f_name'] ." ". $info['l_name']; ?></p>
-        <p><?php echo $info['mail']; ?></p>
+        <p> <a href="mailto:<?php echo $info['mail']; ?>"><?php echo $info['mail']; ?></a></p>
         <p><?php echo $info['phone_emp']; ?></p>
       </div>
       <div class="right">
         <p class="center-text">Ansvarlig for flg. kunder:</p>
         <hr id="line">
-        
+
       </div>
     </div>
 

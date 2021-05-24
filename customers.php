@@ -1,4 +1,5 @@
-<?php include('functions.php'); ?>
+<?php include('functions.php');
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -7,6 +8,7 @@
   </head>
   <body>
     <?php include('navigation.php'); ?>
+    <p><a href="customers.php?cus_type=3">Små virksomheder</a> </p>
     <a href="create-customers.php">Opret ny kunde</a>
     <br>
     <?php $data = performQuery("SELECT id, comp_name FROM customers");
