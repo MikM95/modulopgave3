@@ -7,13 +7,15 @@
   </head>
   <body>
     <?php include('navigation.php') ?>
-    <?php $data = performQuery("SELECT firstname, lastname FROM users");
+    <?php $data = performQuery("SELECT id, f_name, l_name FROM employees");
     while($row = mysqli_fetch_array($data)) {
       ?>
-      <a href="">  <?php
-            echo $row['firstname'];
+      <a href="employees-single.php?eid=<?php echo $row['id']; ?>">
+
+            <?php
+            echo $row['f_name'];
             echo " ";
-            echo $row['lastname'] . "<br>";
+            echo $row['l_name'] . "<br>";
           }
 
             ?></a>

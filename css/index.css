@@ -32,3 +32,15 @@
   text-align: center;
   word-spacing: normal;
 }
+
+.site-width {
+  width: 100%;
+}
+.right {
+  background-color: blue;
+  margin-left: 50%;
+}
+.left {
+  background-color: red;
+  width: 50%; float: left;
+}
