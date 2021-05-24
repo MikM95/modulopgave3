@@ -11,14 +11,15 @@
     while($row = mysqli_fetch_array($data)) {
       ?>
       <a href="employees-single.php?eid=<?php echo $row['id']; ?>">
+        <?php
+        echo $row['f_name'];
+        echo " ";
+        echo $row['l_name'] . "<br>";
+        ?>
+      </a>
+    <?php } ?>
 
-            <?php
-            echo $row['f_name'];
-            echo " ";
-            echo $row['l_name'] . "<br>";
-          }
 
-            ?></a>
 
 
 
