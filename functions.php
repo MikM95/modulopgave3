@@ -2,7 +2,7 @@
   $host = "localhost";
   $user = "root";
   $password = "root";
-  $database = "aros-son";
+  $database = "aros_son";
   $mysqli = mysqli_connect($host, $user, $password, $database);
 
   if(mysqli_connect_errno()){
