@@ -10,8 +10,9 @@ $cid = $_GET['cid'];
   </head>
   <body>
   <?php include('navigation.php');
-  $data = performQuery("SELECT id, comp_name, mail, contact_person, phone_cus FROM customers WHERE id='$cid'");
-  $info = mysqli_fetch_array($data);
+  $data = performQuery("SELECT customers.id, comp_name, customers.mail, phone_cus, contact_person, assigned_employee, employees.id, employees.f_name, employees.l_name FROM customers INNER JOIN employees ON customers.assigned_employee = employees.id WHERE customers.id=$cid");
+  $info = mysqli_fetch_assoc($data);
+
   ?>
   <div class="site-width">
     <div class="left">
@@ -23,7 +24,7 @@ $cid = $_GET['cid'];
     <div class="right">
       <p class="center-text">Ansvarlig medarbejder</p>
       <hr id="line">
-
+      <p class="center-text"><?php echo $info['f_name'] ." ". $info['l_name']; ?> </p>
     </div>
   </div>
   </body>
