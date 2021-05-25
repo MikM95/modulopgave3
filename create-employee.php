@@ -13,20 +13,27 @@
     <div class="formular">
       <form method="post">
         <div class="line-breaker">
-          <input type="text" placeholder="Virksomheds navn">
-          <input type="text" placeholder="Telefon nummer">
+          <input type="text" placeholder="Fornavn">
+          <input type="text" placeholder="Efternavn">
         </div>
         <div class="line-breaker">
           <input type="text" placeholder="Adresse">
-          <input type="text" placeholder="Mail">
-        </div>
-        <div class="line-breaker">
           <input type="text" placeholder="By">
-          <input type="text" placeholder="Kunde type">
         </div>
         <div class="line-breaker">
           <input type="text" placeholder="Postnummer">
-          <input type="text" placeholder="Ansvarlig medarbejder">
+        </div>
+        <div class="line-breaker">
+          <input type="text" placeholder="Lønnummer">
+          <input type="date" placeholder="Ansættelsesdato">
+        </div>
+        <div class="line-breaker">
+          <input type="email" placeholder="Email">
+          <input type="text" placeholder="Tlf. nummer">
+        </div>
+        <div class="line-breaker">
+          <input type="text" placeholder="Brugernavn">
+          <input type="password" placeholder="Adgangskode">
         </div>
         <button type="submit" id="more-right">Opret kunde</button>
       </form>

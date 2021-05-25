@@ -37,11 +37,9 @@
   width: 100%;
 }
 .right {
-  background-color: blue;
   margin-left: 50%;
 }
 .left {
-  background-color: red;
   width: 50%; float: left;
 }
 .center-text {

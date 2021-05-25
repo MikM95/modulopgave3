@@ -7,6 +7,7 @@
   </head>
   <body>
     <?php include('navigation.php') ?>
+    <a href="create-employee.php">Opret ny medarbejder</a>
     <?php $data = performQuery("SELECT id, f_name, l_name FROM employees");
     while($row = mysqli_fetch_array($data)) {
       ?>

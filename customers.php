@@ -11,7 +11,8 @@
     <p><a href="customers.php?cus_type=3">Små virksomheder</a> </p>
     <a href="create-customers.php">Opret ny kunde</a>
     <br>
-    <?php $data = performQuery("SELECT id, comp_name FROM customers");
+
+    <?php $data = performQuery("SELECT id, comp_name FROM customers where cus_type");
     while($row = mysqli_fetch_array($data)) { ?>
       <a href="customer-single.php?cid=<?php echo $row['id']; ?>">
           <?php echo $row['comp_name']; ?>
