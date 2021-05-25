@@ -8,11 +8,19 @@
   </head>
   <body>
     <?php include('navigation.php'); ?>
-    <p><a href="customers.php?cus_type=3">Små virksomheder</a> </p>
+    <p><a href="customers.php?kategori=3">Små virksomheder</a> </p>
+    <p><a href="customers.php?kategori=2">Mellem virksomheder</a></p>
+    <p><a href="customers.php?kategori=1">Store virksomheder</a></p>
     <a href="create-customers.php">Opret ny kunde</a>
     <br>
+  
+    <?php if(isset($_GET['kategori'])) {
+      $kategori = $_GET['kategori'];
+      $data = performQuery("SELECT id, comp_name FROM customers  where cus_type= $kategori");
+    }else {
+      $data = performQuery("SELECT id, comp_name FROM customers");
+    }
 
-    <?php $data = performQuery("SELECT id, comp_name FROM customers where cus_type");
     while($row = mysqli_fetch_array($data)) { ?>
       <a href="customer-single.php?cid=<?php echo $row['id']; ?>">
           <?php echo $row['comp_name']; ?>
