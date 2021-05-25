@@ -35,10 +35,10 @@
           <input type="text" placeholder="Brugernavn">
           <input type="password" placeholder="Adgangskode">
         </div>
-        <button type="submit" id="more-right">Opret kunde</button>
+        <div class="button">
+        <button type="submit" >Opret kunde</button>
       </form>
     </div>
-
 
   </body>
 </html>
