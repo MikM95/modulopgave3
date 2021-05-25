@@ -12,8 +12,8 @@ $cid = $_GET['cid'];
   <?php include('navigation.php');
   $data = performQuery("SELECT customers.id, comp_name, customers.mail, phone_cus, contact_person, assigned_employee, employees.id, employees.f_name, employees.l_name FROM customers INNER JOIN employees ON customers.assigned_employee = employees.id WHERE customers.id=$cid");
   $info = mysqli_fetch_assoc($data);
-
   ?>
+  
   <div class="site-width">
     <div class="left">
       <p>Firma navn: <?php echo $info['comp_name']; ?> </p>
