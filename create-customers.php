@@ -32,13 +32,7 @@
       </form>
     </div>
 
-    <div class="footer"
-      <p>Aros og Søn Aps <br>
-        Seebladsgade 1 <br>
-        5000 Odense C
 
-      </p>
-    </div>
 
   </body>
 </html>
