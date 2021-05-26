@@ -25,7 +25,7 @@ include('functions.php');
           <input type="text" name="city" placeholder="By">
         </div>
         <div class="line-breaker">
-          <input type="text" name="postal" placeholder="Postnummer">
+          <input type="number" name="postal" placeholder="Postnummer">
           <input type="date" name="hiring_date" placeholder="Ansættelsesdato">
         </div>
         <div class="line-breaker">
