@@ -8,6 +8,7 @@
   </head>
   <body>
     <?php include('navigation.php'); ?>
+    <p><a href="create-message.php">Skriv nyt opslag</a></p>
     <?php $db_data = performQuery("SELECT dato, message, employees.f_name, employees.l_name from messages INNER JOIN employees on messages.sent_by = employees.id ORDER BY dato desc");
     while($row = mysqli_fetch_assoc($db_data)) { ?>
       <div class="flex-container">

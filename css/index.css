@@ -40,13 +40,11 @@
 }
 .flex-container {
   display: flex;
-  border: 3px solid black;
+  border-bottom: 1px solid deeppink;
   padding: 20px;
   }
 .float-child {
   flex: 1
-  border: 2px solid yellow;
-  background-color: red;
 }
 .flex-child:first-child {
   margin-right: 20px;
