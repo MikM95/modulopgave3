@@ -1,8 +1,6 @@
 <?php
 include('functions.php');
-
  ?>
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -13,8 +11,6 @@ include('functions.php');
   </head>
   <body>
     <?php include('navigation.php') ?>
-
-
     <div class="formular">
       <form method="POST">
         <div class="line-breaker">
@@ -40,32 +36,21 @@ include('functions.php');
         <button type="submit" >Opret kunde</button>
         </div>
       </form>
-
+    </div>
     <?php
-
-    $comp_name = $_POST['comp_name'];
-    $mail = $_POST['mail'];
-    $phone_cus = $_POST['phone_cus'];
-    $address = $_POST['address'];
-    $city = $_POST['city'];
-    $postal = $_POST['postal'];
-    $contact_person = $_POST['contact_person'];
-    $cus_type = $_POST['cus_type'];
-    $assigned_employee = $_POST['assigned_employee'];
-      //performQuery("INSERT INTO customers(comp_name) VALUES($_POST['1'])");
       if (isset($_POST['comp_name'], $_POST['mail'], $_POST['phone_cus'], $_POST['address'], $_POST['city'], $_POST['postal'], $_POST['contact_person'], $_POST['cus_type'], $_POST['assigned_employee']))
       {
-
-
-        /*INSERT INTO customers(comp_name, mail, phone_cus, address, city, postal, contact_person, cus_type, assigned_employee) VALUES ($comp_name, 'Mad@mail.com', 45455656, 'Madvej 1', 'Vejen', 6600, 'Peter Madsen', 3, 9)*/
-
-
+        $comp_name = $_POST['comp_name'];
+        $mail = $_POST['mail'];
+        $phone_cus = $_POST['phone_cus'];
+        $address = $_POST['address'];
+        $city = $_POST['city'];
+        $postal = $_POST['postal'];
+        $contact_person = $_POST['contact_person'];
+        $cus_type = $_POST['cus_type'];
+        $assigned_employee = $_POST['assigned_employee'];
         performQuery("INSERT INTO customers (comp_name, mail, phone_cus, address, city, postal, contact_person, cus_type, assigned_employee) VALUES ('$comp_name', '$mail', $phone_cus, '$address', '$city', $postal, '$contact_person', $cus_type, $assigned_employee)");
       }
- ?>
-    </div>
-
-
-
+      ?>
   </body>
 </html>
