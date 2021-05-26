@@ -14,7 +14,7 @@ $eid = $_GET['eid'];
     <?php
     include('navigation.php');
     $data = performQuery("SELECT f_name, l_name, employees.mail, phone_emp, employee_role.role, customers.comp_name FROM employees INNER JOIN employee_role ON employees.role_id = employee_role.role_id INNER JOIN customers ON employees.id = customers.assigned_employee WHERE employees.id=$eid");
-    $info = mysqli_fetch_array($data);
+    $info = mysqli_fetch_assoc($data);
     ?>
 
     <div class="site-width">
@@ -27,8 +27,13 @@ $eid = $_GET['eid'];
       <div class="right">
         <p class="center-text">Ansvarlig for flg. kunder:</p>
         <hr id="line">
-        <?php //Jeg kan kun få koden til smide et firma navn til skærmen, har forsøgt at tilføje et loop for at få den til at smide flere ud men det virker ikke, tror jeg skal snakke med kenneth ?>
-        <p><?php echo $info['comp_name']; ?> </p>
+
+        <?php $db_kunde_data = performQuery("SELECT id, comp_name FROM customers WHERE assigned_employee =$eid"); ?>
+        <ul>
+          <?php  while ($row = mysqli_fetch_assoc($db_kunde_data)) { ?>
+            <li><a href="customer-single.php?cid=<?php echo $row['id'];?>"> <?php echo $row['comp_name']; ?> </a></li>
+          <?php } ?>
+        </ul>
       </div>
     </div>
 

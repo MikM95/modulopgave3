@@ -1,4 +1,4 @@
-ul {
+ul.navigation {
   list-style-type: none;
   background-color: #808080;
   /* Overflow defimerer hvad der sker med indhold der er for stort til at være i et område */
@@ -8,19 +8,19 @@ ul {
   border-bottom:1px solid black;
 
 }
-li {
+ul.navigation li {
   float: left;
 }
-li a{
+ul.navigation li a{
   display: block;
   text-decoration: none;
   color: black;
   text-align: center;
   padding: 14px 169px;
 }
-li a:hover{
+ul.navigation li a:hover{
   background-color: yellow;
 }
-li:first-child {
+ul.navigation li:first-child {
   font-weight: bold;
 }
