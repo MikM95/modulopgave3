@@ -13,7 +13,7 @@ $cid = $_GET['cid'];
   $data = performQuery("SELECT customers.id, comp_name, customers.mail, phone_cus, contact_person, assigned_employee, employees.id, employees.f_name, employees.l_name FROM customers INNER JOIN employees ON customers.assigned_employee = employees.id WHERE customers.id=$cid");
   $info = mysqli_fetch_assoc($data);
   ?>
-  
+
   <div class="site-width">
     <div class="left">
       <p>Firma navn: <?php echo $info['comp_name']; ?> </p>
@@ -24,7 +24,7 @@ $cid = $_GET['cid'];
     <div class="right">
       <p class="center-text">Ansvarlig medarbejder</p>
       <hr id="line">
-      <p class="center-text"><?php echo $info['f_name'] ." ". $info['l_name']; ?> </p>
+      <p class="center-text"><a href="employees-single.php?eid=<?php echo $info['id'];?>"><?php echo $info['f_name'] ." ". $info['l_name']; ?></a></p>
     </div>
   </div>
   </body>
