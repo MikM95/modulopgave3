@@ -50,6 +50,7 @@ include('functions.php');
 
 
         if (isset($_POST['f_name'], $_POST['l_name'], $_POST['address'], $_POST['city'], $_POST['postal'], $_POST['hiring_date'], $_POST['pay_num'], $_POST['mail'], $_POST['phone_emp'], $_POST['username'], $_POST['password']))
+        //der er noget med isset der har en max værdi af en art. Der kan kun være 10 $_POST[], vi har 11
           {
             $f_name = $_POST['f_name'];
             $l_name = $_POST['l_name'];
