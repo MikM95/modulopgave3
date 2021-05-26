@@ -12,9 +12,6 @@
   margin-right: auto;
 
 }
-#more-right{
-  text-align: right;
-}
 .line-breaker {
   padding-bottom: 5px;
 }
@@ -40,6 +37,22 @@
   text-align: center;
   margin-bottom: 0px;
   padding-bottom: 0px;
+}
+.flex-container {
+  display: flex;
+  border: 3px solid black;
+  padding: 20px;
+  }
+.float-child {
+  flex: 1
+  border: 2px solid yellow;
+  background-color: red;
+}
+.flex-child:first-child {
+  margin-right: 20px;
+}
+#more-right{
+  text-align: right;
 }
 #line {
   width: 60%;
