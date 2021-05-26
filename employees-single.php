@@ -13,7 +13,7 @@ $eid = $_GET['eid'];
   <body>
     <?php
     include('navigation.php');
-    $data = performQuery("SELECT f_name, l_name, employees.mail, phone_emp, employee_role.role, customers.comp_name FROM employees INNER JOIN employee_role ON employees.role_id = employee_role.role_id INNER JOIN customers ON employees.id = customers.assigned_employee WHERE employees.id=$eid");
+    $data = performQuery("SELECT f_name, l_name, employees.mail, phone_emp, employee_role.role FROM employees INNER JOIN employee_role ON employees.role_id = employee_role.role_id WHERE employees.id=$eid");
     $info = mysqli_fetch_assoc($data);
     ?>
 
