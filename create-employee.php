@@ -40,7 +40,7 @@ include('functions.php');
           <input type="password" name="password" placeholder="Adgangskode">
         </div>
         <div class="button">
-        <button type="submit" >Opret kunde</button>
+        <button type="submit" >Opret medarbejder</button>
       </form>
     </div>
 
@@ -49,7 +49,7 @@ include('functions.php');
 
 
 
-        if (isset($_POST['f_name'], $_POST['l_name'], $_POST['address'], $_POST['city'], $_POST['postal'], $_POST['hiring_date'], $_POST['pay_num'], $_POST['mail'], $_POST['phone_emp'],$_POST['username'], $_POST['password']))
+        if (isset($_POST['f_name'], $_POST['l_name'], $_POST['address'], $_POST['city'], $_POST['postal'], $_POST['hiring_date'], $_POST['pay_num'], $_POST['mail'], $_POST['phone_emp'], $_POST['username'], $_POST['password']))
 
           {
             $f_name = $_POST['f_name'];
