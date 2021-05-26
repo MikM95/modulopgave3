@@ -12,7 +12,7 @@ include('functions.php');
   </head>
   <body>
     <?php include('navigation.php') ?>
-
+<p class="center-text-bold">Udfyld venligst <span class="bold">alle</span> felter!</p>
 
     <div class="formular">
       <form method="post">
@@ -26,10 +26,11 @@ include('functions.php');
         </div>
         <div class="line-breaker">
           <input type="text" name="postal" placeholder="Postnummer">
+          <input type="date" name="hiring_date" placeholder="Ansættelsesdato">
         </div>
         <div class="line-breaker">
           <input type="text" name="pay_num" placeholder="Lønnummer">
-          <input type="date" name="hiring_date" placeholder="Ansættelsesdato">
+          <input type="number" name="role_id" placeholder="Indtast rolle id">
         </div>
         <div class="line-breaker">
           <input type="email" name="mail" placeholder="Email">
@@ -49,8 +50,9 @@ include('functions.php');
 
 
 
-        if (isset($_POST['f_name'], $_POST['l_name'], $_POST['address'], $_POST['city'], $_POST['postal'], $_POST['hiring_date'], $_POST['pay_num'], $_POST['mail'], $_POST['phone_emp'], $_POST['username'], $_POST['password']))
+        if (isset($_POST['f_name'], $_POST['l_name'], $_POST['address'], $_POST['city'], $_POST['postal'], $_POST['pay_num'], $_POST['mail'], $_POST['phone_emp'], $_POST['username'], $_POST['password']))
         //der er noget med isset der har en max værdi af en art. Der kan kun være 10 $_POST[], vi har 11
+        //Tina har ret i hvad hun skriver, så jeg har sletet så der kun er 10 $_post værdier det betyder at den ikke tjekker efter en værdi i hiring date + rolle id men begge felter skal stadig udfyldes - hvis alle felter bliver udfyldt virker formularen nu! 
           {
             $f_name = $_POST['f_name'];
             $l_name = $_POST['l_name'];
@@ -63,8 +65,9 @@ include('functions.php');
             $phone_emp = $_POST['phone_emp'];
             $username = $_POST['username'];
             $password = $_POST['password'];
+            $role_id = $_POST['role_id'];
 
-            performQuery("INSERT INTO employees (f_name, l_name, address, city, postal, hiring_date, pay_num, mail, phone_emp, username, password) VALUES ('$f_name', '$l_name', '$address', '$city', $postal, $hiring_date, '$pay_num', '$mail', $phone_emp, '$username', '$password')");
+            performQuery("INSERT INTO employees (f_name, l_name, address, city, postal, pay_num, mail, phone_emp, username, password, role_id, hiring_date) VALUES ('$f_name', '$l_name', '$address', '$city', $postal,'$pay_num', '$mail', $phone_emp, '$username', '$password', $role_id, $hiring_date)");
           }
         ?>
 
@@ -73,3 +76,9 @@ include('functions.php');
 
   </body>
 </html>
+
+<?php //
+ //$_POST['hiring_date'],
+ //
+ //hiring_date,
+  //$hiring_date,  ?>
