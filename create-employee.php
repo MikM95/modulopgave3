@@ -1,3 +1,7 @@
+<?php
+include('functions.php');
+
+ ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -13,32 +17,57 @@
     <div class="formular">
       <form method="post">
         <div class="line-breaker">
-          <input type="text" placeholder="Fornavn">
-          <input type="text" placeholder="Efternavn">
+          <input type="text" name="f_name" placeholder="Fornavn">
+          <input type="text" name="l_name" placeholder="Efternavn">
         </div>
         <div class="line-breaker">
-          <input type="text" placeholder="Adresse">
-          <input type="text" placeholder="By">
+          <input type="text" name="address" placeholder="Adresse">
+          <input type="text" name="city" placeholder="By">
         </div>
         <div class="line-breaker">
-          <input type="text" placeholder="Postnummer">
+          <input type="text" name="postal" placeholder="Postnummer">
         </div>
         <div class="line-breaker">
-          <input type="text" placeholder="Lønnummer">
-          <input type="date" placeholder="Ansættelsesdato">
+          <input type="text" name="pay_num" placeholder="Lønnummer">
+          <input type="date" name="hiring_date" placeholder="Ansættelsesdato">
         </div>
         <div class="line-breaker">
-          <input type="email" placeholder="Email">
-          <input type="text" placeholder="Tlf. nummer">
+          <input type="email" name="mail" placeholder="Email">
+          <input type="text" name="phone_emp" placeholder="Tlf. nummer">
         </div>
         <div class="line-breaker">
-          <input type="text" placeholder="Brugernavn">
-          <input type="password" placeholder="Adgangskode">
+          <input type="text" name="username" placeholder="Brugernavn">
+          <input type="password" name="password" placeholder="Adgangskode">
         </div>
         <div class="button">
         <button type="submit" >Opret kunde</button>
       </form>
     </div>
+
+
+    <?php
+
+        $f_name = $_POST['f_name'];
+        $l_name = $_POST['l_name'];
+        $address = $_POST['address'];
+        $city = $_POST['city'];
+        $postal = $_POST['postal'];
+        $hiring_date = $_POST['hiring_date'];
+        $pay_num = $_POST['pay_num'];
+        $mail = $_POST['mail'];
+        $phone_emp = $_POST['phone_emp'];
+        $username = $_POST['username'];
+        $password = $_POST['password']
+
+        if (isset($_POST['f_name'], $_POST['l_name'], $_POST['address'], $_POST['city'], $_POST['postal'], $_POST['hiring_date'], $_POST['pay_num'], $_POST['mail'], $_POST['phone_emp'],$_POST['username'], $_POST['password']))
+
+          {
+            performQuery("INSERT INTO employees (f_name, l_name, address, city, postal, hiring_date, pay_num, mail, phone_emp, mail, phone_emp, username, password) VALUES ('$comp_name', '$mail', $phone_cus, '$address', '$city', $postal, '$contact_person', $cus_type, $assigned_employee)");
+          }
+        ?>
+
+
+ </div>
 
   </body>
 </html>
