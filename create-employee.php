@@ -47,21 +47,23 @@ include('functions.php');
 
     <?php
 
-        $f_name = $_POST['f_name'];
-        $l_name = $_POST['l_name'];
-        $address = $_POST['address'];
-        $city = $_POST['city'];
-        $postal = $_POST['postal'];
-        $hiring_date = $_POST['hiring_date'];
-        $pay_num = $_POST['pay_num'];
-        $mail = $_POST['mail'];
-        $phone_emp = $_POST['phone_emp'];
-        $username = $_POST['username'];
-        $password = $_POST['password']
+
 
         if (isset($_POST['f_name'], $_POST['l_name'], $_POST['address'], $_POST['city'], $_POST['postal'], $_POST['hiring_date'], $_POST['pay_num'], $_POST['mail'], $_POST['phone_emp'],$_POST['username'], $_POST['password']))
 
           {
+            $f_name = $_POST['f_name'];
+            $l_name = $_POST['l_name'];
+            $address = $_POST['address'];
+            $city = $_POST['city'];
+            $postal = $_POST['postal'];
+            $hiring_date = $_POST['hiring_date'];
+            $pay_num = $_POST['pay_num'];
+            $mail = $_POST['mail'];
+            $phone_emp = $_POST['phone_emp'];
+            $username = $_POST['username'];
+            $password = $_POST['password'];
+
             performQuery("INSERT INTO employees (f_name, l_name, address, city, postal, hiring_date, pay_num, mail, phone_emp, mail, phone_emp, username, password) VALUES ('$comp_name', '$mail', $phone_cus, '$address', '$city', $postal, '$contact_person', $cus_type, $assigned_employee)");
           }
         ?>
