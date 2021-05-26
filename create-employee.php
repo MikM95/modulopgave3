@@ -40,7 +40,7 @@ include('functions.php');
           <input type="password" name="password" placeholder="Adgangskode">
         </div>
         <div class="button">
-        <button type="submit" >Opret kunde</button>
+        <button type="submit">Opret medarbejder</button>
       </form>
     </div>
 
