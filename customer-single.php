@@ -10,7 +10,7 @@ $cid = $_GET['cid'];
   </head>
   <body>
   <?php include('navigation.php');
-  $data = performQuery("SELECT customers.id, comp_name, customers.mail, phone_cus, contact_person, assigned_employee, employees.id, employees.f_name, employees.l_name FROM customers INNER JOIN employees ON customers.assigned_employee = employees.id WHERE customers.id=$cid");
+  $data = performQuery("SELECT customers.id, comp_name, customers.mail, phone_cus, contact_person, customers.address, customers.postal, customers.city, assigned_employee, employees.id, employees.f_name, employees.l_name FROM customers INNER JOIN employees ON customers.assigned_employee = employees.id WHERE customers.id=$cid");
   $info = mysqli_fetch_assoc($data);
   ?>
 
@@ -20,6 +20,8 @@ $cid = $_GET['cid'];
       <p>Kontakt person: <?php echo $info['contact_person']; ?></p>
       <p>Mail: <a href="mailto:<?php echo $info['mail']; ?>"><?php echo $info['mail']; ?></a></p>
       <p>Tlf: <?php echo $info['phone_cus']; ?></p>
+      <p>Adresse: <?php echo $info['address']; ?></p>
+      <p>Postnummer: <?php echo $info['postal'] ." " . $info['city']; ?></p>
     </div>
     <div class="right">
       <p class="center-text">Ansvarlig medarbejder</p>
