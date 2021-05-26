@@ -61,8 +61,7 @@ include('functions.php');
 
 
         performQuery("INSERT INTO customers (comp_name, mail, phone_cus, address, city, postal, contact_person, cus_type, assigned_employee) VALUES ('$comp_name', '$mail', $phone_cus, '$address', '$city', $postal, '$contact_person', $cus_type, $assigned_employee)");
-        echo $comp_name;
-}
+      
  ?>
     </div>
 
