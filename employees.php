@@ -4,6 +4,7 @@
   <head>
     <meta charset="utf-8">
     <title>Medarbejdere</title>
+    <link rel="stylesheet" href="css/master.css">
   </head>
   <body>
     <?php include('navigation.php') ?>
@@ -14,7 +15,7 @@
     <p><a href="employees.php?rolle=5">Leder</a></p>
     <p><a href="employees.php?rolle=6">Direktør</a></p>
     <br>
-    <a href="create-employee.php">Opret ny medarbejder</a>
+    <a href="create-employee.php" class="none"><div class="new_x">Opret ny medarbejder</div></a>
     <?php
     if(isset($_GET['rolle'])) {
       $kategori = $_GET['rolle'];

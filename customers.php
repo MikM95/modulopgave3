@@ -5,15 +5,16 @@
   <head>
     <meta charset="utf-8">
     <title>Kunder</title>
+    <link rel="stylesheet" href="css/master.css">
   </head>
   <body>
     <?php include('navigation.php'); ?>
     <p><a href="customers.php?kategori=3">Små virksomheder</a> </p>
     <p><a href="customers.php?kategori=2">Mellem virksomheder</a></p>
     <p><a href="customers.php?kategori=1">Store virksomheder</a></p>
-    <a href="create-customers.php">Opret ny kunde</a>
+    <a href="create-customers.php" class="none"><div class="new_x">Opret ny kunde</div></a>
     <br>
-  
+
     <?php if(isset($_GET['kategori'])) {
       $kategori = $_GET['kategori'];
       $data = performQuery("SELECT id, comp_name FROM customers  where cus_type= $kategori");

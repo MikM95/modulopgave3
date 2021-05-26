@@ -6,7 +6,7 @@ include('functions.php');
   <head>
     <meta charset="utf-8">
     <title>Kunde oprettelse</title>
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/master.css">
 
   </head>
   <body>
@@ -49,7 +49,7 @@ include('functions.php');
         $contact_person = $_POST['contact_person'];
         $cus_type = $_POST['cus_type'];
         $assigned_employee = $_POST['assigned_employee'];
-        
+
         performQuery("INSERT INTO customers (comp_name, mail, phone_cus, address, city, postal, contact_person, cus_type, assigned_employee) VALUES ('$comp_name', '$mail', $phone_cus, '$address', '$city', $postal, '$contact_person', $cus_type, $assigned_employee)");
       }
       ?>

@@ -4,11 +4,11 @@
   <head>
     <meta charset="utf-8">
     <title>Forside</title>
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/master.css">
   </head>
   <body>
     <?php include('navigation.php'); ?>
-    <p><a href="create-message.php">Skriv nyt opslag</a></p>
+    <a href="create-message.php" class="none"><div class="new_x">Skriv nyt opslag</div></a>
     <?php $db_data = performQuery("SELECT dato, message, employees.f_name, employees.l_name from messages INNER JOIN employees on messages.sent_by = employees.id ORDER BY dato desc");
     while($row = mysqli_fetch_assoc($db_data)) { ?>
       <div class="flex-container">
