@@ -9,12 +9,18 @@
   </head>
   <body>
     <?php include('navigation.php'); ?>
-    <p><a href="customers.php?kategori=3">Små virksomheder</a> </p>
-    <p><a href="customers.php?kategori=2">Mellem virksomheder</a></p>
-    <p><a href="customers.php?kategori=1">Store virksomheder</a></p>
     <a href="create-customers.php" class="none"><div class="new_x">Opret ny kunde</div></a>
-    <br>
 
+    <div class="contet-wrapper">
+      <div class="sorting">
+        <ul>
+          <li>Kategorier:</li>
+          <a href="customers.php?kategori=3"><li>Små virksomheder</li></a>
+          <a href="customers.php?kategori=2"><li>Mellem virksomheder</li></a>
+          <a href="customers.php?kategori=1"><li>Store virksomheder</li></a>
+        </ul>
+      </div>
+      <main>
     <?php if(isset($_GET['kategori'])) {
       $kategori = $_GET['kategori'];
       $data = performQuery("SELECT id, comp_name FROM customers  where cus_type= $kategori");
@@ -28,7 +34,7 @@
         </a>
         <br>
       <?php } ?>
-
-
+    </main>
+  </div>
   </body>
 </html>
