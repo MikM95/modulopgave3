@@ -28,6 +28,9 @@
           <input type="text" placeholder="Postnummer">
           <input type="text" placeholder="Ansvarlig medarbejder">
         </div>
+        <div class="line-breaker">
+          <input type="text" placeholder="Kontakt person">
+        </div>
         <div class="button">
         <button type="submit" >Opret kunde</button>
         </div>
