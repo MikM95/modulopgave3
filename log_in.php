@@ -1,14 +1,9 @@
 <?php
-session_start();
 include('functions.php');
 
-// Tjek om begge felter er udfyldt
-if ( !isset($_POST['username'], $_POST['password']) ) {
-	exit('Udfyld begge felter');
-}
-
+//prepare
 if ($stmt = $mysqli->prepare('SELECT id, password FROM employees WHERE username = ?')) {
-	// Bind parameter
+	// Bind parameter. 's' står for string
 	$stmt->bind_param('s', $_POST['username']);
 	$stmt->execute();
 	// opbevar resulat

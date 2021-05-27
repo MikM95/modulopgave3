@@ -29,7 +29,7 @@
         }else {
           $data = performQuery("SELECT id, f_name, l_name FROM employees");
         }
-        while($row = mysqli_fetch_array($data)) { ?>
+        while($row = mysqli_fetch_assoc($data)) { ?>
           <a href="employees-single.php?eid=<?php echo $row['id']; ?>">
             <?php
             echo $row['f_name'];

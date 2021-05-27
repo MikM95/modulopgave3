@@ -40,7 +40,7 @@ include('functions.php');
           <input type="password" name="password" placeholder="Adgangskode">
         </div>
         <div class="line-breaker">
-          <?php //på linje 42 til 51 har jeg trukket data ud af databasen, det er egentligt unødvendigt at lave det variblet på nuværende tidspunkt, da det ikke er muligt at oprette nye roller på siden, men hvis det engang bliver muligt opdaterer denne "select meny" automatisk opdateret med evt. nye roller ?>
+          <?php //på linje 42 til 51 har jeg trukket data ud af databasen, det er egentligt unødvendigt at lave det variblet på nuværende tidspunkt, da det ikke er muligt at oprette nye roller på siden, men hvis det engang bliver muligt opdaterer denne "select menu" automatisk opdateret med evt. nye roller ?>
           <label for="role_id">Vælg medarbejder rolle: </label>
           <select name="rolle_id">
             <?php $data = performQuery("select * from employee_role");
@@ -84,9 +84,3 @@ include('functions.php');
 
   </body>
 </html>
-
-<?php //
- //$_POST['hiring_date'],
- //
- //hiring_date,
-  //$hiring_date,  ?>

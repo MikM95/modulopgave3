@@ -8,16 +8,16 @@
   if(mysqli_connect_errno()){
     echo "connection falied" . mysqli_connect_errno();
     }
-  else {
+  /*else {
     echo "connection success! <br>";
-    }
+  }*/
 
     function performQuery($sql) {
       global $mysqli;
       $result = mysqli_query($mysqli, $sql);
 
       if($result) {
-        echo "Query success <br>";
+      //  echo "Query success <br>";
         return $result;
         }
       else {
