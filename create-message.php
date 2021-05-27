@@ -12,9 +12,17 @@
     <?php include('navigation.php'); ?>
     <br>
     <form method="post">
-      <input type="number" name="sent_by" placeholder="Indtast medarbejder id">
-      <br>
-      <br>
+      <div class="line-breaker">
+        <label for="sent_by">Vælg dig selv: </label>
+        <select name="sent_by">
+          <?php $data = performQuery("SELECT id, f_name, l_name FROM employees");
+          while($row = mysqli_fetch_assoc($data)) { ?>
+              <option value="<?php echo $row['id']; ?>"><?php echo $row['f_name'];
+              echo " ";
+              echo $row['l_name']; ?></option>
+            <?php } ?>
+        </select>
+      </div>
       <textarea name="message" rows="8" cols="80" placeholder="Skriv dit opslag her"></textarea>
       <button type="submit">Slå op</button>
     </form>
