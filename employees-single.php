@@ -32,7 +32,7 @@ $eid = $_GET['eid'];
         <?php $db_kunde_data = performQuery("SELECT id, comp_name FROM customers WHERE assigned_employee =$eid"); ?>
         <ul>
           <?php  while ($row = mysqli_fetch_assoc($db_kunde_data)) { ?>
-            <li><a href="customer-single.php?cid=<?php echo $row['id'];?>"> <?php echo $row['comp_name']; ?> </a></li>
+            <li class="center-text"><a class="black-text" href="customer-single.php?cid=<?php echo $row['id'];?>"> <?php echo $row['comp_name']; ?> </a></li>
           <?php } ?>
         </ul>
       </div>

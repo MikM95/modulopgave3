@@ -26,7 +26,7 @@ $cid = $_GET['cid'];
     <div class="right">
       <p class="center-text">Ansvarlig medarbejder</p>
       <hr id="line">
-      <p class="center-text"><a href="employees-single.php?eid=<?php echo $info['id'];?>"><?php echo $info['f_name'] ." ". $info['l_name']; ?></a></p>
+      <p class="center-text"><a class="black-text" href="employees-single.php?eid=<?php echo $info['id'];?>"><?php echo $info['f_name'] ." ". $info['l_name']; ?></a></p>
     </div>
   </div>
   </body>

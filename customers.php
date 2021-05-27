@@ -29,7 +29,7 @@
     }
 
     while($row = mysqli_fetch_array($data)) { ?>
-      <a href="customer-single.php?cid=<?php echo $row['id']; ?>">
+      <a class="black-text" href="customer-single.php?cid=<?php echo $row['id']; ?>">
           <?php echo $row['comp_name']; ?>
         </a>
         <br>
